@@ -32,7 +32,7 @@ public class UserController {
                 .path("/{id}")
                 .buildAndExpand(savedUser.getId())
                 .toUri();
-        return ResponseEntity.created(location);
+        return ResponseEntity.created(location).build();
     }
 
 }
