@@ -1,5 +1,8 @@
 package com.example.restfulwebservice.user;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 // SpringBoot 2.3 버전 부터는 Web Startes에 더이상 javax.validation.*는 기본으로 포함하지 않는다.
@@ -10,6 +13,8 @@ import java.util.Date;
 
 @Data
 @AllArgsConstructor
+//@JsonIgnoreProperties(value={"password"})
+@JsonFilter("UserInfo")
 public class User {
     private Integer id;
 
@@ -17,4 +22,8 @@ public class User {
     private String name;
     @Past
     private Date joinDate;
+    //@JsonIgnore
+    private String password;
+    //@JsonIgnore
+    private String ssn;
 }
