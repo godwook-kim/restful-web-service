@@ -30,7 +30,6 @@ public class UserJpaController {
         if(!user.isPresent()){
             throw new UserNotFoundException(String.format("ID[%s] not found " , id));
         }
-
         return user.get();
     }
 }
