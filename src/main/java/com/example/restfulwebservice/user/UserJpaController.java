@@ -1,6 +1,5 @@
 package com.example.restfulwebservice.user;
 
-import jdk.internal.loader.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
