@@ -11,6 +11,7 @@ import java.util.List;
 public class UserDaoService {
     private static List<User> users = new ArrayList<>();
     private static int userCount = 3 ;
+
     static {
         users.add(new User(1, "Kenneth", new Date() , "pass1","701010-1111111"));
         users.add(new User(2, "Alice", new Date()   , "pass1","701010-1111111"));
